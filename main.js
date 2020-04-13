@@ -86,6 +86,10 @@ class Game {
         document.dispatchEvent(new CustomEvent('keydown', { detail: ev.target.dataset.code }));
       }
     });
+
+    document.addEventListener('keydown', (ev) => {
+      if (ev.code === 'Space') this.container.click();
+    });
   }
 
   startGame() {
