@@ -20,7 +20,11 @@ dl {
   margin: 0;
 }
 
-#info {
+label {
+  cursor: pointer;
+}
+
+#info dl {
   text-align: center;
   width: 6em;
   margin: 0.25em auto;
@@ -30,6 +34,14 @@ dl {
   font-family: cursive;
   border-radius: 0.25em;
   border: 2px solid #ad961d;
+}
+
+.upper-right-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  padding: 0.5em;
 }
 
 #game {
@@ -155,4 +167,34 @@ dl {
 
 .control-arrow:first-child {
   width: 100%;
+}
+
+#help {
+  display: none;
+}
+
+#help-modal {
+  font-family: cursive;
+  padding: 1em;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+}
+
+#help-modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5em 0;
+}
+
+#help:checked + #help-modal {
+  display: block;
 }
